@@ -26,7 +26,7 @@ module.exports = {
         },
       },
 
-      voterId: {
+      raterId: {
         type: Sequelize.INTEGER,
         allowNull: false,
         onDelete: 'CASCADE',
@@ -35,7 +35,7 @@ module.exports = {
           key: 'id',
         },
       },
-      
+
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
