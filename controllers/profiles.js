@@ -3,7 +3,9 @@ const cloudinary = require('cloudinary').v2
 
 async function index(req, res) {
   try {
-    const profiles = await Profile.findAll()
+    const profiles = await Profile.findAll({
+      include: [{ model: Rating, as: "ratingsReceived" }],
+    })
     res.json(profiles)
   } catch (error) {
     console.log(error)
